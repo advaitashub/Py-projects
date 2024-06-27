@@ -1,15 +1,16 @@
-#TASK 1: CREATING A TO-DO LIST GUI
+ #TASK 1: CREATING A TO-DO LIST GUI
 
 from tkinter import *
 
 #pop up box structure
 
 class todo:
-    def __init__(self, root):
-       self.root = root
-       self.root.title('To-Do-List')
-       self.root.geometry('650x410+300+150')
 
+    def __init__(self, root):
+      self.root = root
+      self.root.title('To-Do-List')
+      self.root.geometry('650x410+300+150')
+      
        #Label as a heading 
        self.label = Label(self.root,text='To-Do-List-App', font= 'ariel, 25 bold', width = 10, bd=5,bg="red", fg='black')
        self.label.pack(side='top',fill=BOTH)
@@ -68,14 +69,15 @@ class todo:
 
        self.button2= Button(self.root, text="Delete", font='sarif, 20 bold italic',width=10, bd = 5, bg= 'orange', fg= 'black',command= delete)
        self.button2.place(x=30, y=280)   
-
-
-       
 def main():
+
  root = Tk()
+ 
  ui = todo(root)
+ 
  root.mainloop()
 
 if __name__== "__main__":
+
     main()
  
